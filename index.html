@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade</title>
+    <link rel="shortcut icon" href="imagens/icons8-relógio-48.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Verificador de Idade</h1>
+    </header>
+     <main>
+         <form action="" method="get">
+             <label for="iAno">Ano</label>
+             <input type="number" name="ano" id="iAno" min="0">
+
+             <fieldset class="ops_radio">
+                <legend>Sexo</legend>
+
+                 <label for="iop_masc">Masculino</label>
+                 <input type="radio" name="op_sexo" id="iop_masc">
+
+                 <label for="iop_femin">Feminino</label>
+                 <input type="radio" name="op_sexo" id="iop_femin">
+             </fieldset>
+             <button id="verifica_idade">Verificar</button>
+         </form>
+         <picture>
+             <img id="referent_image" src="imagens/sky-g7c9547511_1280.jpg" alt="foto">
+         </picture>
+         <div id="idade_pessoa">
+            Pessoa papa
+         </div>
+     </main>
+    <footer>
+        Feito por <a href="http://www.github.com/AqueleCaio" target="_blank" rel="noopener noreferrer">Caio_HP</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
