@@ -9,15 +9,26 @@ const botao_verificar = document.getElementById('verifica_idade')
 let date_now = new Date()
 let year_now = date_now.getFullYear()
 
-const imagem_criança = [
-    box_imagem.setAttribute('src', 'imagens/garoto-1.jpg'),
-    box_imagem.setAttribute('src', 'imagens/garoto-2.jpg')
+const imagem_garotos = [
+    'imagens/garoto-1.jpg',
+    'imagens/garoto-2.jpg'
 ]
 
-function mudaImagem(idade){
-    if(idade > 1 && idade < 10){
-        let imagemAleatória = (Math.random() * imagem_criança.length)
-        return imagem_criança[imagemAleatória]
+const imagem_garotas = [
+    'imagens/garota-1.jpg',
+    'imagens/garota-2.jpg'
+]
+
+const mudaImagem = (idade) => {
+    //box_imagem.style.display = 'block'
+    let random_index = Math.floor(Math.random() * imagem_garotos.length)
+
+    if(idade > 0 && idade < 10 && masculino.checked){
+        return box_imagem.setAttribute('src', imagem_garotos[random_index])
+    }
+
+    else if(idade > 0 && idade < 10 && feminino.checked){
+        return box_imagem.setAttribute('src', imagem_garotas[random_index])
     }
 }
 
@@ -26,7 +37,7 @@ const mudaTexto = () => {
 
     mudaImagem(idade)
 
-    if(ano_input.value > year_now || idade < 0){
+    if(ano_input.value > year_now || idade <= 0){
         campo_idade.innerHTML = `...`
         window.alert('Ano inválido')
     } 
