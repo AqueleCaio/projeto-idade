@@ -36,13 +36,13 @@ main{
     cursor: pointer;
 }
 
-main > form > #verifica_idade{
+main #verifica_idade{
     width: 200px;
     height: 30px;
-    margin: 10px;
+    margin: 10px auto;
 }
 
-main > form > #verifica_idade:hover{
+main #verifica_idade:hover{
     cursor: pointer;
 }
 
