@@ -20,7 +20,6 @@ const imagem_garotas = [
 ]
 
 const mudaImagem = (idade) => {
-    //box_imagem.style.display = 'block'
     let random_index = Math.floor(Math.random() * imagem_garotos.length)
 
     if(idade > 0 && idade < 10 && masculino.checked){
